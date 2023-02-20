@@ -13,14 +13,16 @@
 
 ## [arc_to_goal_pos](#arc_to_goal_pos)
 
+Used in the ending cutscene for the grand star. It moves the star in an arc towards the position defined. Returns the time left for the star to reach its goal position.
+
 ### Lua Example
 `local integerValue = arc_to_goal_pos(a0, a1, yVel, gravity)`
 
 ### Parameters
 | Field | Type |
 | ----- | ---- |
-| a0 | [Vec3f](structs.md#Vec3f) |
-| a1 | [Vec3f](structs.md#Vec3f) |
+| empty | [Vec3f](structs.md#Vec3f) |
+| pos | [Vec3f](structs.md#Vec3f) |
 | yVel | `number` |
 | gravity | `number` |
 
@@ -28,13 +30,15 @@
 - `integer`
 
 ### C Prototype
-`s32 arc_to_goal_pos(Vec3f a0, Vec3f a1, f32 yVel, f32 gravity);`
+`s32 arc_to_goal_pos(Vec3f empty, Vec3f pos, f32 yVel, f32 gravity);`
 
 [:arrow_up_small:](#)
 
 <br />
 
 ## [bhv_1up_common_init](#bhv_1up_common_init)
+
+Defines the physics of the 1up before a specific type is set.
 
 ### Lua Example
 `bhv_1up_common_init()`
@@ -54,6 +58,8 @@
 
 ## [bhv_1up_hidden_in_pole_loop](#bhv_1up_hidden_in_pole_loop)
 
+Checks determines every frame what a 1up hidden in a pole should do after being found.
+
 ### Lua Example
 `bhv_1up_hidden_in_pole_loop()`
 
@@ -62,6 +68,13 @@
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Make visible, set y velocity, and set oAction to 3 |
+| 1 | Move towards Mario |
+| 3 | Loop in air, spawn sparkles (after 18 frames, every frame), set tangable and set oAction to 1 (after 37 frames, once) |
 
 ### C Prototype
 `void bhv_1up_hidden_in_pole_loop(void);`
