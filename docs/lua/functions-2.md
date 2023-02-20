@@ -321,6 +321,8 @@ Determines every frame what a "walking" 1up should do.
 
 ## [bhv_act_selector_init](#bhv_act_selector_init)
 
+Defines a list for the stars the player has collected so far. Used for the act selection menu for a level.
+
 ### Lua Example
 `bhv_act_selector_init()`
 
@@ -338,6 +340,8 @@ Determines every frame what a "walking" 1up should do.
 <br />
 
 ## [bhv_act_selector_loop](#bhv_act_selector_loop)
+
+Handles the menu scrolling inside the act selection menu for a level.
 
 ### Lua Example
 `bhv_act_selector_loop()`
@@ -357,6 +361,8 @@ Determines every frame what a "walking" 1up should do.
 
 ## [bhv_act_selector_star_type_loop](#bhv_act_selector_star_type_loop)
 
+Defines a type for a star in the act selection menu.
+
 ### Lua Example
 `bhv_act_selector_star_type_loop()`
 
@@ -366,6 +372,14 @@ Determines every frame what a "walking" 1up should do.
 ### Returns
 - None
 
+### oStarSelectorType Cases
+
+| Num | Action |
+| --- | ------ |
+| STAR_SELECTOR_NOT_SELECTED (0) | Shrinks the star size and resets the star angle to 0 |
+| STAR_SELECTOR_SELECTED (1) | Increases the star size and rotates the star |
+| STAR_SELECTOR_100_COINS (2) | Rotates the star |
+
 ### C Prototype
 `void bhv_act_selector_star_type_loop(void);`
 
@@ -374,6 +388,8 @@ Determines every frame what a "walking" 1up should do.
 <br />
 
 ## [bhv_activated_back_and_forth_platform_init](#bhv_activated_back_and_forth_platform_init)
+
+Initializes the platforms that moves to a set point. Examples are the elevator in BITFS and the arrow platform in BITS.
 
 ### Lua Example
 `bhv_activated_back_and_forth_platform_init()`
@@ -393,6 +409,8 @@ Determines every frame what a "walking" 1up should do.
 
 ## [bhv_activated_back_and_forth_platform_update](#bhv_activated_back_and_forth_platform_update)
 
+Updates the platform. If Mario is on it, it will move towards a set point; otherwise, it will move back to its home position.
+
 ### Lua Example
 `bhv_activated_back_and_forth_platform_update()`
 
@@ -410,6 +428,8 @@ Determines every frame what a "walking" 1up should do.
 <br />
 
 ## [bhv_alpha_boo_key_loop](#bhv_alpha_boo_key_loop)
+
+An early version of the unused Beta Boo Key update function. Spawns coin sparkles and fails to kill the boo when Mario collides with it.
 
 ### Lua Example
 `bhv_alpha_boo_key_loop()`
@@ -429,6 +449,8 @@ Determines every frame what a "walking" 1up should do.
 
 ## [bhv_ambient_sounds_init](#bhv_ambient_sounds_init)
 
+Plays the ambient bird sounds outside the castle.
+
 ### Lua Example
 `bhv_ambient_sounds_init()`
 
@@ -447,6 +469,8 @@ Determines every frame what a "walking" 1up should do.
 
 ## [bhv_animated_texture_loop](#bhv_animated_texture_loop)
 
+Calls [cur_obj_set_pos_to_home_with_debug](functions-4.md#cur_obj_set_pos_to_home_with_debug)
+
 ### Lua Example
 `bhv_animated_texture_loop()`
 
@@ -464,6 +488,8 @@ Determines every frame what a "walking" 1up should do.
 <br />
 
 ## [bhv_animates_on_floor_switch_press_init](#bhv_animates_on_floor_switch_press_init)
+
+Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObject](constants.md#id_bhvFloorSwitchAnimatesObject)
 
 ### Lua Example
 `bhv_animates_on_floor_switch_press_init()`
