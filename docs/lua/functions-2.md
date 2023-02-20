@@ -58,7 +58,7 @@ Defines the physics of the 1up before a specific type is set.
 
 ## [bhv_1up_hidden_in_pole_loop](#bhv_1up_hidden_in_pole_loop)
 
-Checks determines every frame what a 1up hidden in a pole should do after being found.
+Determines every frame what a hidden 1up in a pole should do after being found.
 
 ### Lua Example
 `bhv_1up_hidden_in_pole_loop()`
@@ -85,6 +85,8 @@ Checks determines every frame what a 1up hidden in a pole should do after being 
 
 ## [bhv_1up_hidden_in_pole_spawner_loop](#bhv_1up_hidden_in_pole_spawner_loop)
 
+Called when a hidden 1up on a pole is found. Spawns the 1up when it is within 700 units of the player.
+
 ### Lua Example
 `bhv_1up_hidden_in_pole_spawner_loop()`
 
@@ -102,6 +104,8 @@ Checks determines every frame what a 1up hidden in a pole should do after being 
 <br />
 
 ## [bhv_1up_hidden_in_pole_trigger_loop](#bhv_1up_hidden_in_pole_trigger_loop)
+
+Checks every frame if the player has touched a 1up trigger on a pole.
 
 ### Lua Example
 `bhv_1up_hidden_in_pole_trigger_loop()`
@@ -121,6 +125,8 @@ Checks determines every frame what a 1up hidden in a pole should do after being 
 
 ## [bhv_1up_hidden_loop](#bhv_1up_hidden_loop)
 
+Determines every frame what a hidden 1up should do after being found.
+
 ### Lua Example
 `bhv_1up_hidden_loop()`
 
@@ -130,6 +136,14 @@ Checks determines every frame what a 1up hidden in a pole should do after being 
 ### Returns
 - None
 
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Make visible, set y velocity, and set oAction to 3 |
+| 1 | Move towards Mario |
+| 2 | Flicker and remove the object (for 30 frames, once)
+| 3 | Loop in air, spawn sparkles (after 18 frames, every frame), set tangable and set oAction to 1 (after 37 frames, once) |
+
 ### C Prototype
 `void bhv_1up_hidden_loop(void);`
 
@@ -138,6 +152,8 @@ Checks determines every frame what a 1up hidden in a pole should do after being 
 <br />
 
 ## [bhv_1up_hidden_trigger_loop](#bhv_1up_hidden_trigger_loop)
+
+Checks every frame if the player has touched a 1up trigger.
 
 ### Lua Example
 `bhv_1up_hidden_trigger_loop()`
@@ -156,6 +172,8 @@ Checks determines every frame what a 1up hidden in a pole should do after being 
 <br />
 
 ## [bhv_1up_init](#bhv_1up_init)
+
+Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx01, it disables the 1up if you have either key.
 
 ### Lua Example
 `bhv_1up_init()`
