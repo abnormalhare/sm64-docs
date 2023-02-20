@@ -193,6 +193,8 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ## [bhv_1up_jump_on_approach_loop](#bhv_1up_jump_on_approach_loop)
 
+Determines every frame what a 1up that jumps on approach should do
+
 ### Lua Example
 `bhv_1up_jump_on_approach_loop()`
 
@@ -202,6 +204,13 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 ### Returns
 - None
 
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Move and set oAction to 1 if Mario is within 1000 units |
+| 1 | Move away from Mario and spawn sparkles |
+| 2 | Check if Mario has interacted with it, flicker and remove the object (for 30 frames) |
+
 ### C Prototype
 `void bhv_1up_jump_on_approach_loop(void);`
 
@@ -210,6 +219,8 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 <br />
 
 ## [bhv_1up_loop](#bhv_1up_loop)
+
+Checks if Mario has interacted with the 1up.
 
 ### Lua Example
 `bhv_1up_loop()`
@@ -229,6 +240,8 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ## [bhv_1up_running_away_loop](#bhv_1up_running_away_loop)
 
+Determines every frame what a 1up that runs away should do.
+
 ### Lua Example
 `bhv_1up_running_away_loop()`
 
@@ -237,6 +250,13 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Spawns sparkles (after 18 frames, every frame), plays a 1up sound (after 0 frames, once), loops in air, makes object tangable (after 37 frames, once) |
+| 1 | Spawns sparkles, moves 1up away from Mario |
+| 2 | Flickers and removes the 1up (for 30 frames), checks for interaction with Mario |
 
 ### C Prototype
 `void bhv_1up_running_away_loop(void);`
@@ -247,6 +267,8 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ## [bhv_1up_sliding_loop](#bhv_1up_sliding_loop)
 
+Determines every frame what a sliding 1up should do.
+
 ### Lua Example
 `bhv_1up_sliding_loop()`
 
@@ -255,6 +277,13 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Sets oAction to 1 if the 1up is within 1000 units of Mario |
+| 1 | Moves the 1up |
+| 2 | Flickers and removes the 1up (for 30 frames), checks for interaction with Mario |
 
 ### C Prototype
 `void bhv_1up_sliding_loop(void);`
@@ -265,6 +294,8 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ## [bhv_1up_walking_loop](#bhv_1up_walking_loop)
 
+Determines every frame what a "walking" 1up should do.
+
 ### Lua Example
 `bhv_1up_walking_loop()`
 
@@ -273,6 +304,13 @@ Runs [bhv_1up_common_init](#bhv_1up_common_init). If the behavior params are xx0
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Spawns sparkles (after 18 frames, every frame), plays a 1up sound (after 0 frames, once), loops in air, makes object tangable (after 37 frames, once) |
+| 1 | Sets oAction to 2 (after 300 frames), checks for interaction with Mario |
+| 2 | Flickers and removes the 1up (for 30 frames), checks for interaction with Mario |
 
 ### C Prototype
 `void bhv_1up_walking_loop(void);`
