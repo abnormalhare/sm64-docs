@@ -489,7 +489,7 @@ Calls [cur_obj_set_pos_to_home_with_debug](functions-4.md#cur_obj_set_pos_to_hom
 
 ## [bhv_animates_on_floor_switch_press_init](#bhv_animates_on_floor_switch_press_init)
 
-Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObject](constants.md#id_bhvFloorSwitchAnimatesObject)
+Sets the [parent object to the nearest behavior](functions-4.md#cur_obj_nearest_object_with_behavior) with [bhvFloorSwitchAnimatesObject](constants.md#id_bhvFloorSwitchAnimatesObject)
 
 ### Lua Example
 `bhv_animates_on_floor_switch_press_init()`
@@ -509,6 +509,8 @@ Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObjec
 
 ## [bhv_animates_on_floor_switch_press_loop](#bhv_animates_on_floor_switch_press_loop)
 
+Animates the purple floor switch when you step on it.
+
 ### Lua Example
 `bhv_animates_on_floor_switch_press_loop()`
 
@@ -527,6 +529,8 @@ Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObjec
 
 ## [bhv_arrow_lift_loop](#bhv_arrow_lift_loop)
 
+Determines every frame what an arrow lift should do.
+
 ### Lua Example
 `bhv_arrow_lift_loop()`
 
@@ -536,6 +540,12 @@ Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObjec
 ### Returns
 - None
 
+### oAction Cases
+| Num | Action |
+| ARROW_LIFT_ACT_IDLE (0) | Sets oAction to 1 if Mario is on the platform (after 60 frames) |
+| ARROW_LIFT_ACT_MOVING_AWAY (1) | Moves the platform toward a set point, sets oAction to 2 if the platform is done moving |
+| ARROW_LIFT_ACT_MOVING_BACK (2) | Moves the platform back to its home, sets oAction to 0 if the platform is done moving |
+
 ### C Prototype
 `void bhv_arrow_lift_loop(void);`
 
@@ -544,6 +554,8 @@ Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObjec
 <br />
 
 ## [bhv_bbh_tilting_trap_platform_loop](#bhv_bbh_tilting_trap_platform_loop)
+
+Checks to see if the a player is standing on the tilting platform in BBH, and rotates it accordingly.
 
 ### Lua Example
 `bhv_bbh_tilting_trap_platform_loop()`
@@ -562,6 +574,8 @@ Sets the parent object to the nearest behavior with [bhvFloorSwitchAnimatesObjec
 <br />
 
 ## [bhv_beta_boo_key_loop](#bhv_beta_boo_key_loop)
+
+(Unused) Sets the current action function to sBetaBooKeyActions
 
 ### Lua Example
 `bhv_beta_boo_key_loop()`
