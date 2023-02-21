@@ -595,6 +595,8 @@ Checks to see if the a player is standing on the tilting platform in BBH, and ro
 
 ## [bhv_beta_bowser_anchor_loop](#bhv_beta_bowser_anchor_loop)
 
+Puts an object that kills all non-Mario objects 300 units in front of Mario and 30 units above his feet. 
+
 ### Lua Example
 `bhv_beta_bowser_anchor_loop()`
 
@@ -612,6 +614,8 @@ Checks to see if the a player is standing on the tilting platform in BBH, and ro
 <br />
 
 ## [bhv_beta_chest_bottom_init](#bhv_beta_chest_bottom_init)
+
+Spawns a beta chest bottom.
 
 ### Lua Example
 `bhv_beta_chest_bottom_init()`
@@ -631,6 +635,8 @@ Checks to see if the a player is standing on the tilting platform in BBH, and ro
 
 ## [bhv_beta_chest_bottom_loop](#bhv_beta_chest_bottom_loop)
 
+[Sets a cylinder](functions-4.md#cur_obj_push_mario_away_from_cylinder) that pushes Mario out of itself every frame.
+
 ### Lua Example
 `bhv_beta_chest_bottom_loop()`
 
@@ -649,6 +655,8 @@ Checks to see if the a player is standing on the tilting platform in BBH, and ro
 
 ## [bhv_beta_chest_lid_loop](#bhv_beta_chest_lid_loop)
 
+Determines every frame what the lid of a beta chest should do.
+
 ### Lua Example
 `bhv_beta_chest_lid_loop()`
 
@@ -657,6 +665,13 @@ Checks to see if the a player is standing on the tilting platform in BBH, and ro
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+|-----|--------|
+| BETA_CHEST_ACT_IDLE_CLOSED (0) | If Mario is within 300 units, sets oAction to 1 |
+| BETA_CHEST_ACT_OPENING (1) | Plays a sound and spawns bubbles (after 0 frames, once) opens the lid, sets oAction to 2 if the lid is fully open |
+| BETA_CHEST_ACT_IDLE_OPEN (2) | Does nothing |
 
 ### C Prototype
 `void bhv_beta_chest_lid_loop(void);`
