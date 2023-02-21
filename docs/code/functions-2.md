@@ -16,7 +16,7 @@
 Used in the ending cutscene for the grand star. It moves the star in an arc towards the position defined. Returns the time left for the star to reach its goal position.
 
 ### Lua Example
-`local integerValue = arc_to_goal_pos(a0, a1, yVel, gravity)`
+`local integerValue = arc_to_goal_pos(empty, pos, yVel, gravity)`
 
 ### Parameters
 | Field | Type |
