@@ -1,1 +1,0 @@
-make RENDER_API=D3D11 WINDOW_API=DXGI DEBUG=1 DEVELOPMENT=1 && ./build/us_pc/sm64.us.f3dex2e.exe
