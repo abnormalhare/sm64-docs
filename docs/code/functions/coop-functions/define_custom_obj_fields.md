@@ -2,14 +2,16 @@
 
 ## Description
 
-<div style="float: right; background-color: rgba(0, 0, 0, 0.2);padding: 5px; border: solid; border-color: #000; color: #ffff00;">
+<style>
+table {
+    float: right;
+}
+</style>
+
     
 |Location|
 |-|
 |Row 1, Column 1|
-
-    
-</div>
 
 Defines a custom set of overlapping object fields. Lorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mama
 
