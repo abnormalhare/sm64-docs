@@ -1,19 +1,12 @@
-# [define_custom_obj_fields](#define_custom_obj_fields)
+# [smlua_func_define_custom_obj_fields](#smlua_func_define_custom_obj_fields)
+
+|Location|Type|
+|-|-|
+|[smlua_cobject.c](https://github.com/abnormalhare/sm64-docs/tree/og-repo/src/pc/lua/smlua_cobject.c)|Coop Function|
 
 ## Description
 
-<style>
-table {
-    float: right;
-}
-</style>
-
-    
-|Location|
-|-|
-|Row 1, Column 1|
-
-Defines a custom set of overlapping object fields. Lorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mamaLorem ipsum dolor yo mama
+Defines a custom set of overlapping object fields.
 
 ## Lua Example
 
@@ -28,6 +21,12 @@ Defines a custom set of overlapping object fields. Lorem ipsum dolor yo mamaLore
 > ## Note
 >
 > The `fieldTable` table's keys must start with the letter `o` and the values must be either `u32`, `s32`, or `f32`.
+
+## Return Value
+
+| Type | Description |
+|-|-|
+bool|If the function does not encounter an error, it returns `1`. However, if the parameter is not a `Lua Table` or the mod it is built into is not currently loading, it will return `0`.
 
 ## C Prototype
 
