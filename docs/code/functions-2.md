@@ -722,6 +722,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_beta_holdable_object_loop](#bhv_beta_holdable_object_loop)
 
+Determines every frame what a beta holdable object should do.
+
 ### Lua Example
 `bhv_beta_holdable_object_loop()`
 
@@ -731,6 +733,14 @@ Sets the physics of a beta holdable object.
 ### Returns
 - None
 
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| HELD_FREE (0) | Applies the standard physics for the box |
+| HELD_HELD (1) | Disables displaying the box |
+| HELD_THROWN (2) | Throw the object |
+| HELD_DROPPED (3) | Drops the object |
+
 ### C Prototype
 `void bhv_beta_holdable_object_loop(void);`
 
@@ -739,6 +749,8 @@ Sets the physics of a beta holdable object.
 <br />
 
 ## [bhv_beta_moving_flames_loop](#bhv_beta_moving_flames_loop)
+
+Scales, moves, and increases the timer of a beta moving flame.
 
 ### Lua Example
 `bhv_beta_moving_flames_loop()`
@@ -758,6 +770,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_beta_moving_flames_spawn_loop](#bhv_beta_moving_flames_spawn_loop)
 
+Determines every frame what beta moving flames should do.
+
 ### Lua Example
 `bhv_beta_moving_flames_spawn_loop()`
 
@@ -767,6 +781,13 @@ Sets the physics of a beta holdable object.
 ### Returns
 - None
 
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 - 7 | Spawns a red flame and increases oAction |
+| 8 | Does nothing |
+| 9 | Increases oAction |
+
 ### C Prototype
 `void bhv_beta_moving_flames_spawn_loop(void);`
 
@@ -775,6 +796,8 @@ Sets the physics of a beta holdable object.
 <br />
 
 ## [bhv_beta_trampoline_spring_loop](#bhv_beta_trampoline_spring_loop)
+
+Scales and displaces a beta spring. 
 
 ### Lua Example
 `bhv_beta_trampoline_spring_loop()`
@@ -794,6 +817,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_beta_trampoline_top_loop](#bhv_beta_trampoline_top_loop)
 
+Spawns in the rest of the trampoline and determines whether Mario is on it every frame.
+
 ### Lua Example
 `bhv_beta_trampoline_top_loop()`
 
@@ -811,6 +836,8 @@ Sets the physics of a beta holdable object.
 <br />
 
 ## [bhv_big_boo_loop](#bhv_big_boo_loop)
+
+Updates the boo hitbox, moves the boo, focuses it on Mario, and calls what action it should do.
 
 ### Lua Example
 `bhv_big_boo_loop()`
@@ -830,6 +857,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_big_boulder_generator_loop](#bhv_big_boulder_generator_loop)
 
+Generates a rolling boulder every 64 frames.
+
 ### Lua Example
 `bhv_big_boulder_generator_loop()`
 
@@ -847,6 +876,8 @@ Sets the physics of a beta holdable object.
 <br />
 
 ## [bhv_big_boulder_init](#bhv_big_boulder_init)
+
+Sets the physics and home position of a rolling boulder.
 
 ### Lua Example
 `bhv_big_boulder_init()`
@@ -866,6 +897,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_big_boulder_loop](#bhv_big_boulder_loop)
 
+Determines every frame what a rolling boulder shoould do. If the behavior params are xx02, the boulder will [explode and spawn coins](functions-4.md#obj_explode_and_spawn_coins) when it hits a wall.
+
 ### Lua Example
 `bhv_big_boulder_loop()`
 
@@ -875,6 +908,12 @@ Sets the physics of a beta holdable object.
 ### Returns
 - None
 
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| 0 | Sets the velocity and sets oAction to 1 |
+| 1 | Runs physics and plays the rolling sound. |
+
 ### C Prototype
 `void bhv_big_boulder_loop(void);`
 
@@ -883,6 +922,8 @@ Sets the physics of a beta holdable object.
 <br />
 
 ## [bhv_big_bully_init](#bhv_big_bully_init)
+
+Sets the physics of the bully and sets the behavior params to xx01.
 
 ### Lua Example
 `bhv_big_bully_init()`
@@ -902,6 +943,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_big_bully_with_minions_init](#bhv_big_bully_with_minions_init)
 
+Spawns a triplet of bullies, makes them inactive, intangible, and invisible.
+
 ### Lua Example
 `bhv_big_bully_with_minions_init()`
 
@@ -920,6 +963,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_big_bully_with_minions_loop](#bhv_big_bully_with_minions_loop)
 
+Determines every frame what a big bully with minions should do.
+
 ### Lua Example
 `bhv_big_bully_with_minions_loop()`
 
@@ -928,6 +973,18 @@ Sets the physics of a beta holdable object.
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| BULLY_ACT_PATROL (0) | Sets oAction to 1 if Mario is within its home. |
+| BULLY_ACT_CHASE_MARIO (1) | Chases after Mario |
+| BULLY_ACT_KNOCKBACK (2) | Moves backward after Mario bumps into it |
+| BULLY_ACT_BACK_UP (3) | Backs up after knockback |
+| BULLY_ACT_INACTIVE (4) | Makes a Big Bully fall if the 3 minions are killed |
+| BULLY_ACT_ACTIVATE_AND_FALL (5) | causes a Big Bully to become tangable and visible, also checks for collision |
+| BULLY_ACT_LAVA_DEATH (100) | Spawns the Big Bully star |
+| BULLY_ACT_DEATH_PLANE_DEATH (101) | Deactivates the Big Bully |
 
 ### C Prototype
 `void bhv_big_bully_with_minions_loop(void);`
@@ -938,6 +995,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_bird_update](#bhv_bird_update)
 
+Determines every frame what a bird should do. If the behavior params are xx01, the object is a spawner
+
 ### Lua Example
 `bhv_bird_update()`
 
@@ -946,6 +1005,12 @@ Sets the physics of a beta holdable object.
 
 ### Returns
 - None
+
+### oAction Cases
+| Num | Action |
+| --- | ------ |
+| BIRD_ACT_INACTIVE (0) | Sets oAction to 1 and initializes the movement |
+| BIRD_ACT_FLY (1) | Makes the birds fly |
 
 ### C Prototype
 `void bhv_bird_update(void);`
@@ -956,6 +1021,8 @@ Sets the physics of a beta holdable object.
 
 ## [bhv_birds_sound_loop](#bhv_birds_sound_loop)
 
+Determines what sound should play from birds.
+
 ### Lua Example
 `bhv_birds_sound_loop()`
 
@@ -965,6 +1032,12 @@ Sets the physics of a beta holdable object.
 ### Returns
 - None
 
+### oBehParams2ndByte Cases
+| Num | Sound |
+| 0 | SOUND_OBJ2_BIRD_CHIRP1 |
+| 1 | SOUND_GENERAL2_BIRD_CHIRP2 |
+| 2 | SOUND_OBJ_BIRD_CHIRP3 |
+
 ### C Prototype
 `void bhv_birds_sound_loop(void);`
 
@@ -973,6 +1046,8 @@ Sets the physics of a beta holdable object.
 <br />
 
 ## [bhv_bitfs_sinking_cage_platform_loop](#bhv_bitfs_sinking_cage_platform_loop)
+
+Sets the position of the sinking cage platform every frame. If the behavior params are not xx00, it moves the platform in a large amplitude sine wave.
 
 ### Lua Example
 `bhv_bitfs_sinking_cage_platform_loop()`
