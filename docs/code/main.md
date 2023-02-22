@@ -2,6 +2,8 @@
 
 # Lua Reference
 
+[NOTE] These items have **BASIC** descriptions and do not go into full detail on what the function does **COMPLETELY**
+
 The Lua scripting API is in early development.
 
 Expect many more things to be supported in the future.

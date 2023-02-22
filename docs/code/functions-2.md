@@ -1067,6 +1067,8 @@ Sets the position of the sinking cage platform every frame. If the behavior para
 
 ## [bhv_bitfs_sinking_platform_loop](#bhv_bitfs_sinking_platform_loop)
 
+Makes the BITFS metal triangle platforms move up and down in a sine wave.
+
 ### Lua Example
 `bhv_bitfs_sinking_platform_loop()`
 
@@ -1085,6 +1087,8 @@ Sets the position of the sinking cage platform every frame. If the behavior para
 
 ## [bhv_black_smoke_bowser_loop](#bhv_black_smoke_bowser_loop)
 
+Initially sets the movement of the black smoke from Bowser, then moves the smoke accordingly.
+
 ### Lua Example
 `bhv_black_smoke_bowser_loop()`
 
@@ -1102,6 +1106,8 @@ Sets the position of the sinking cage platform every frame. If the behavior para
 <br />
 
 ## [bhv_black_smoke_mario_loop](#bhv_black_smoke_mario_loop)
+
+
 
 ### Lua Example
 `bhv_black_smoke_mario_loop()`
