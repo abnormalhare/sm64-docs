@@ -2,21 +2,25 @@
 
 ---
 
-1 | [2](functions-2.md) | [3](functions-3.md) | [4](functions-4.md) | [next >](functions-2.md)]
-
----
-
 # Supported Functions
 
-- manually written functions
-   - [define_custom_obj_fields](functions/coop-functions/define_custom_obj_fields.md)
-   - [network_init_object](#network_init_object)
-   - [network_send_object](#network_send_object)
-   - [network_send_to](#network_send_to)
-   - [network_send](#network_send)
-   - [djui_hud_render_texture](#djui_hud_render_texture)
-   - [get_texture_info](#get_texture_info)
-   - [djui_hud_render_texture_interpolated](#djui_hud_render_texture_interpolated)
+## Coop Functions
+
+- ### [define_custom_obj_fields](functions/coop-functions/define_custom_obj_fields.md)
+
+- ### [network_init_object](#network_init_object)
+
+- ### [network_send_object](#network_send_object)
+
+- ### [network_send_to](#network_send_to)
+
+- ### [network_send](#network_send)
+
+- ### [djui_hud_render_texture](#djui_hud_render_texture)
+
+- ### [get_texture_info](#get_texture_info)
+
+- ### [djui_hud_render_texture_interpolated](#djui_hud_render_texture_interpolated)
 
 <br />
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-Defines a custom set of overlapping object fields.
+Defines a custom set of overlapping object fields. The function loops through the table given and makes sure to check the given field is valid. It then adds it to a list of customFields.
 
 ## Lua Example
 
@@ -18,18 +18,14 @@ Defines a custom set of overlapping object fields.
 | ----- | ---- |
 | fieldTable | `Lua Table` |
 
-> ## Note
+> ### **Note**
 >
-> The `fieldTable` table's keys must start with the letter `o` and the values must be either `u32`, `s32`, or `f32`.
+> The `fieldTable` table's keys must start with the letter `o` and the values must be either `u32`, `s32`, or `f32`. Otherwise, the function will return `0` and will not add the key to the list of custom functions.
 
 ## Return Value
 
 | Type | Description |
 |-|-|
-bool|If the function does not encounter an error, it returns `1`. However, if the parameter is not a `Lua Table` or the mod it is built into is not currently loading, it will return `0`.
-
-## C Prototype
-
-`N/A`
+bool|If the function does not encounter an error, it returns `1`. However, if the parameter is not a `Lua Table`, the mod it is built into is not currently loading, or the fieldTable's keys are incorrect, it will return `0`.
 
 ## [:rewind: Function Index](../../functions.md)
