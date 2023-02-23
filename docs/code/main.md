@@ -1,41 +1,48 @@
-## [:rewind: Directory](../main.md)
+# Functions and Variables
 
-# Lua Reference
+<center>
 
-[NOTE] These items have **BASIC** descriptions and do not go into full detail on what the function does **COMPLETELY**
+## **Sections**
 
-The Lua scripting API is in early development.
+### [Globals](globals.md) | [Constants](constants.md) | [Functions](functions.md) | [Structs](structs.md)
 
-Expect many more things to be supported in the future.
+<br/>
 
-<br />
+## **Guides**
 
-## How to install Lua mods
+### [Hooks](guides/hooks.md) | [gMarioStates](guides/mario-state.md) | [Setting up Visual Studio Code](vs-code-setup.md)  
+
+</center>
+
+---
+<br/>
+
+## Lua Reference
+
+> Please Note: The Lua scripting API is in early development. Expect many more things to be supported in the future.
+
+<br/>
+
+### *How to install Lua mods*
+
 Lua scripts you make can be placed either the `mods` folder in the base directory, or in `<SAVE FILE LOCATION>/mods`
 
-Save file locations:
-- Windows: `%appdata%/sm64ex-coop`
-- Linux: `~/.local/share/sm64ex-coop`
-- MacOS: `~/Library/Application Support/sm64ex-coop`
+> *Save file locations*:
+>
+> - Windows: `%appdata%/sm64ex-coop`
+> - Linux: `~/.local/share/sm64ex-coop`
+> - MacOS: `~/Library/Application Support/sm64ex-coop`
 
+<br/>
+
+### *Tips*
+
+> When developing Lua mods, run the game from a console. Lua errors and logs will appear there.
+
+> You can use the `print()` command when debugging. Your logs will show up in the console.
+
+> You can create a folder within the mods folder containing multiple lua scripts as long as one script is called `main.lua`. Dynos actors can be placed inside this mod folder under `<your mod folder>/actors/`.
 <br />
-
-## Tips
-- When developing Lua mods, run the game from a console. Lua errors and logs will appear there.
-- You can use the `print()` command when debugging. Your logs will show up in the console.
-- You can create a folder within the mods folder containing multiple lua scripts as long as one script is called `main.lua`. Dynos actors can be placed inside this mod folder under `<your mod folder>/actors/`.
-<br />
-
-## Sections
-- [Globals](globals.md)
-- [Constants](constants.md)
-- [Functions](functions.md)
-- [Structs](structs.md)
-
-### Guides
-- [Hooks](guides/hooks.md)
-- [gMarioStates](guides/mario-state.md)
-- [Setting up Visual Studio Code](vs-code-setup.md) 
 
 ## Important notes on player indices
 
@@ -76,3 +83,5 @@ All of this is a holdover from when there were only two players. It was a reason
 - [Character Movesets](../../mods/character-movesets.lua)
 - [Hide and Seek Gamemode](../../mods/hide-and-seek.lua)
 - [Football (soccer) Gamemode](../../mods/football.lua)
+
+## [:rewind: Directory](../main.md)
