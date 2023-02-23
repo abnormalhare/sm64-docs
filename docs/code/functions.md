@@ -1,4 +1,4 @@
-## [:rewind: Lua Reference](main.md)
+## [:rewind: Functions and Constants](main.md)
 
 ---
 
