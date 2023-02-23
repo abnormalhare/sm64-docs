@@ -1,4 +1,4 @@
-## [:rewind: Lua Reference](_main.md)
+## [:rewind: Lua Reference](main.md)
 
 ---
 
