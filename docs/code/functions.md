@@ -1,4 +1,4 @@
-## [:rewind: Functions and Constants](main.md)
+## [:rewind: Code](main.md)
 
 ---
 
