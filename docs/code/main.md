@@ -1,6 +1,6 @@
 # Functions and Variables
 
-<center>
+<p align="center">
 
 ## **Sections**
 
@@ -12,7 +12,7 @@
 
 ### [Hooks](guides/hooks.md) | [gMarioStates](guides/mario-state.md) | [Setting up Visual Studio Code](vs-code-setup.md)  
 
-</center>
+</p>
 
 ---
 <br/>
