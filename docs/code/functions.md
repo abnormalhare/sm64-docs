@@ -8,7 +8,7 @@
 
 - ### [define_custom_obj_fields](functions/coop-functions/define_custom_obj_fields.md)
 
-- ### [network_init_object](functions/coop-functions/network_init_object)
+- ### [network_init_object](functions/coop-functions/network_init_object.md)
 
 - ### [network_send_object](#network_send_object)
 
