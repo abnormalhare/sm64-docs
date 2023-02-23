@@ -26,6 +26,6 @@ Defines a custom set of overlapping object fields. The function loops through th
 
 | Type | Description |
 |-|-|
-bool|If the function does not encounter an error, it returns `1`. However, if the parameter is not a `Lua Table`, the mod it is built into is not currently loading, or the fieldTable's keys are incorrect, it will return `0`.
+`bool`|If the function does not encounter an error, it returns `1`. However, if the parameter is not a `Lua Table`, the mod it is built into is not currently loading, or the fieldTable's keys are incorrect, it will return `0`.
 
-## [:rewind: Function Index](../../functions.md)
+## [:rewind: Function Index](../../functions.md#coop-functions)

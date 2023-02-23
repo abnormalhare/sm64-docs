@@ -8,7 +8,7 @@
 
 - ### [define_custom_obj_fields](functions/coop-functions/define_custom_obj_fields.md)
 
-- ### [network_init_object](#network_init_object)
+- ### [network_init_object](functions/coop-functions/network_init_object)
 
 - ### [network_send_object](#network_send_object)
 
@@ -1577,36 +1577,6 @@
 
 ---
 # manually written functions
-
-<br />
-
-[:arrow_up_small:](#)
-
-## [network_init_object](#network_init_object)
-
-Enables synchronization on an object.
-
-- Setting `standardSync` to `true` will automatically synchronize the object at a rate that is determined based on player distance. The commonly used object fields will be automatically synchronized.
-- Setting `standardSync` to `false` will not automatically synchronize the object, or add commonly used object fields. The mod must manually call `network_send_object()` when fields have changed.
-
-The `fieldTable` parameter can be `nil`, or a list of object fields.
-
-### Lua Example
-`network_init_object(obj, true, { 'oCustomField1', 'oCustomField2', 'oCustomField3' })`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| object | [Object](structs.md#Object) |
-| standardSync | `bool` |
-| fieldTable | `Lua Table` |
-
-### C Prototype
-`N/A`
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## [network_send_object](#network_send_object)
 
