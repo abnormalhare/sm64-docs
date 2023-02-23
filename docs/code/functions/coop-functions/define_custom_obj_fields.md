@@ -6,7 +6,7 @@
 
 ## Description
 
-Defines a custom set of overlapping object fields. The function loops through the table given and makes sure to check the given field is valid. It then adds it to a list of customFields.
+Defines a custom set of overlapping object fields. The function loops through the table given and makes sure to check the given field is valid. It then adds it to a list of custom fields.
 
 ## Lua Example
 
