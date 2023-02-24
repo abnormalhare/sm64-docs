@@ -1,4 +1,4 @@
-## [:rewind: Code](main.md)
+## [:rewind: Code](../main.md)
 
 ---
 
@@ -6,21 +6,21 @@
 
 ## Coop Functions
 
-- ### [define_custom_obj_fields](functions/coop-functions/define_custom_obj_fields.md)
+- ### [define_custom_obj_fields](coop-functions/define_custom_obj_fields.md)
 
-- ### [network_init_object](functions/coop-functions/network_init_object.md)
+- ### [network_init_object](coop-functions/network_init_object.md)
 
-- ### [network_send_object](#network_send_object)
+- ### [network_send_object](coop-functions/network_send_object.md)
 
-- ### [network_send_to](#network_send_to)
+- ### [network_send_to](coop-functions/network_send_to.md)
 
-- ### [network_send](#network_send)
+- ### [network_send](coop-functions/network_send.md)
 
-- ### [djui_hud_render_texture](#djui_hud_render_texture)
+- ### [djui_hud_render_texture](coop-functions/djui_hud_render_texture.md)
 
-- ### [get_texture_info](#get_texture_info)
+- ### [get_texture_info](coop-functions/get_texture_info.md)
 
-- ### [djui_hud_render_texture_interpolated](#djui_hud_render_texture_interpolated)
+- ### [djui_hud_render_texture_interpolated](coop-functions/djui_hud_render_texture_interpolated.md)
 
 <br />
 
@@ -1576,76 +1576,6 @@
 
 
 ---
-# manually written functions
-
-## [network_send_object](#network_send_object)
-
-Sends a packet that synchronizes an object. This does not need to be called when `standardSync` is enabled.
-
-The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
-
-### Lua Example
-`network_send_object(obj, false)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| object | [Object](structs.md#Object) |
-| reliable | `bool` |
-
-### C Prototype
-`N/A`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## [network_send_to](#network_send_to)
-
-Sends a packet to a particular player (using their local index) containing whatever data you want.
-
-`dataTable` can only contain strings, integers, numbers, booleans, and nil
-
-The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
-
-### Lua Example
-`network_send_to(localPlayerIndex, reliable, { data1 = 'hello', data2 = 10})`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| localPlayerIndex | `integer` |
-| reliable | `bool` |
-| dataTable | `table` |
-
-### C Prototype
-`N/A`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## [network_send](#network_send)
-
-Sends a packet to all players containing whatever data you want.
-
-`dataTable` can only contain strings, integers, numbers, booleans, and nil
-
-The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
-
-### Lua Example
-`network_send(reliable, { data1 = 'hello', data2 = 10})`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| reliable | `bool` |
-| dataTable | `table` |
-
-### C Prototype
-`N/A`
-
-[:arrow_up_small:](#)
 
 <br />
 

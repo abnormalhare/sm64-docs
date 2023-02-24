@@ -8,12 +8,6 @@
 
 Enables synchronization on an object. The function initializes syncing on the object. If the 3rd parameter is a table, it assigns the given fields to it.
 
-> Setting `standardSync` to `true` will automatically synchronize the object at a rate that is determined based on player distance. The commonly used object fields will be automatically synchronized.  
->
-> Setting `standardSync` to `false` will not automatically synchronize the object, or add commonly used object fields. The mod must manually call `network_send_object()` when fields have changed.
-
-The `fieldTable` parameter can be `nil`, or a list of object fields.
-
 ## Lua Example
 
 `network_init_object(obj, true, { 'oCustomField1', 'oCustomField2', 'oCustomField3' })`
@@ -26,10 +20,16 @@ The `fieldTable` parameter can be `nil`, or a list of object fields.
 | standardSync | `bool` |
 | fieldTable | `Lua Table` |
 
+> Setting `standardSync` to `true` will automatically synchronize the object at a rate that is determined based on player distance. The commonly used object fields will be automatically synchronized.  
+>
+> Setting `standardSync` to `false` will not automatically synchronize the object, or add commonly used object fields. The mod must manually call `network_send_object()` when fields have changed.
+
+>The `fieldTable` parameter can be `nil`, or a list of object fields.
+
 ## Return Type
 
 |Type|Description|
 |-|-|
-| `bool` |If the function does not encounter an error, it returns `1`. However, If any parameter is not its intended value or the object it attempts to sync does not sync, it returns `0` |
+| `bool` |If the function does not encounter an error, it returns `1`. However, If any parameter is not its intended value or the object it attempts to sync does not sync, it returns `0`. |
 
-## [:rewind: Function Index](../../functions.md#coop-functions)
+## [:rewind: Function Index](../functions.md#coop-functions)

@@ -4,7 +4,7 @@
 
 ## **Sections**
 
-### [Globals](globals.md) | [Constants](constants.md) | [Functions](functions.md) | [Structs](structs.md)
+### [Globals](globals.md) | [Constants](constants.md) | [Functions](functions/functions.md) | [Structs](structs.md)
 
 <br/>
 
@@ -18,6 +18,16 @@
 <br/>
 
 ## Lua Reference
+
+<center>
+
+## **Help**
+
+### [Examples](examples/) | [Guides](guides/)
+
+<br/>
+
+</center>
 
 > Please Note: The Lua scripting API is in early development. Expect many more things to be supported in the future.
 
