@@ -22,7 +22,13 @@
 
 - ### [djui_hud_render_texture_interpolated](coop-functions/djui_hud_render_texture_interpolated.md)
 
-<br />
+---
+
+## Area Functions
+
+- ### area_get_warp_node
+
+- ### area_get_warp_node_from_params
 
 - behavior_actions.h
    - [arc_to_goal_pos](functions-2.md#arc_to_goal_pos)
@@ -792,6 +798,9 @@
 
 <br />
 
+level_script.h  
+area_create_warp_node  
+
 - level_update.h
    - [level_trigger_warp](functions-3.md#level_trigger_warp)
 
@@ -898,6 +907,7 @@
    - [cutscene_take_cap_off](functions-3.md#cutscene_take_cap_off)
    - [general_star_dance_handler](functions-3.md#general_star_dance_handler)
    - [generate_yellow_sparkles](functions-3.md#generate_yellow_sparkles)
+   - get_credits_str_width
    - [get_star_collection_dialog](functions-3.md#get_star_collection_dialog)
    - [handle_save_menu](functions-3.md#handle_save_menu)
    - [launch_mario_until_land](functions-3.md#launch_mario_until_land)
@@ -1002,17 +1012,52 @@
 <br />
 
 - math_util.h
+   - anim_spline_init
    - [anim_spline_poll](functions-3.md#anim_spline_poll)
    - [approach_f32](functions-3.md#approach_f32)
    - [approach_s32](functions-3.md#approach_s32)
+   find_vector_perpendicular_to_plane
+get_pos_from_transform_mtx
+mtxf_align_terrain_normal
+mtxf_align_terrain_triangle
+mtxf_billboard
+mtxf_copy
+mtxf_cylboard
+mtxf_identity
+mtxf_inverse
+mtxf_lookat
+mtxf_mul
+mtxf_mul_vec3s
+mtxf_rotate_xy
+mtxf_rotate_xyz_and_translate
+mtxf_rotate_zxy_and_translate
+mtxf_scale_vec3f
+mtxf_to_mtx
+mtxf_translate
    - [not_zero](functions-3.md#not_zero)
+   spline_get_weights
+vec3f_add
    - [vec3f_combine](functions-3.md#vec3f_combine)
+   vec3f_copy
+vec3f_cross
+vec3f_dif
    - [vec3f_dist](functions-3.md#vec3f_dist)
    - [vec3f_dot](functions-3.md#vec3f_dot)
    - [vec3f_get_dist_and_angle](functions-3.md#vec3f_get_dist_and_angle)
    - [vec3f_length](functions-3.md#vec3f_length)
+   vec3f_mul
+vec3f_normalize
    - [vec3f_project](functions-3.md#vec3f_project)
+   vec3f_rotate_zxy
+vec3f_set
    - [vec3f_set_dist_and_angle](functions-3.md#vec3f_set_dist_and_angle)
+   vec3f_sum
+vec3f_to_vec3s
+vec3s_add
+vec3s_copy
+vec3s_set
+vec3s_sum
+vec3s_to_vec3f    
 
 <br />
 
@@ -1061,11 +1106,13 @@
    - [is_player_active](functions-3.md#is_player_active)
    - [is_player_in_local_area](functions-3.md#is_player_in_local_area)
    - [is_point_close_to_object](functions-3.md#is_point_close_to_object)
+   is_point_within_radius_of_any_player
    - [is_point_within_radius_of_mario](functions-3.md#is_point_within_radius_of_mario)
    - [nearest_interacting_mario_state_to_object](functions-3.md#nearest_interacting_mario_state_to_object)
    - [nearest_interacting_player_to_object](functions-3.md#nearest_interacting_player_to_object)
    - [nearest_mario_state_to_object](functions-3.md#nearest_mario_state_to_object)
    - [nearest_player_to_object](functions-3.md#nearest_player_to_object)
+   nearest_possible_mario_state_to_object
    - [obj_check_floor_death](functions-3.md#obj_check_floor_death)
    - [obj_check_if_facing_toward_angle](functions-3.md#obj_check_if_facing_toward_angle)
    - [obj_find_wall](functions-3.md#obj_find_wall)
@@ -1153,6 +1200,7 @@
    - [clear_time_stop_flags](functions-4.md#clear_time_stop_flags)
    - [count_objects_with_behavior](functions-4.md#count_objects_with_behavior)
    - [count_unimportant_objects](functions-4.md#count_unimportant_objects)
+   create_transformation_from_matrices
    - [cur_obj_abs_y_dist_to_home](functions-4.md#cur_obj_abs_y_dist_to_home)
    - [cur_obj_advance_looping_anim](functions-4.md#cur_obj_advance_looping_anim)
    - [cur_obj_align_gfx_with_floor](functions-4.md#cur_obj_align_gfx_with_floor)
@@ -1238,6 +1286,7 @@
    - [cur_obj_scale](functions-4.md#cur_obj_scale)
    - [cur_obj_scale_over_time](functions-4.md#cur_obj_scale_over_time)
    - [cur_obj_set_behavior](functions-4.md#cur_obj_set_behavior)
+   cur_obj_set_billboard_if_vanilla_cam
    - [cur_obj_set_direction_table](functions-4.md#cur_obj_set_direction_table)
    - [cur_obj_set_face_angle_to_move_angle](functions-4.md#cur_obj_set_face_angle_to_move_angle)
    - [cur_obj_set_hitbox_and_die_if_attacked](functions-4.md#cur_obj_set_hitbox_and_die_if_attacked)
@@ -1288,12 +1337,15 @@
    - [is_item_in_array](functions-4.md#is_item_in_array)
    - [is_mario_moving_fast_or_in_air](functions-4.md#is_mario_moving_fast_or_in_air)
    - [lateral_dist_between_objects](functions-4.md#lateral_dist_between_objects)
+   linear_mtxf_mul_vec3f
+linear_mtxf_transpose_mul_vec3f
    - [mario_is_dive_sliding](functions-4.md#mario_is_dive_sliding)
    - [mario_is_in_air_action](functions-4.md#mario_is_in_air_action)
    - [mario_is_within_rectangle](functions-4.md#mario_is_within_rectangle)
    - [mario_set_flag](functions-4.md#mario_set_flag)
    - [obj_angle_to_object](functions-4.md#obj_angle_to_object)
    - [obj_angle_to_point](functions-4.md#obj_angle_to_point)
+   obj_apply_scale_to_matrix
    - [obj_apply_scale_to_transform](functions-4.md#obj_apply_scale_to_transform)
    - [obj_attack_collided_from_other_object](functions-4.md#obj_attack_collided_from_other_object)
    - [obj_become_tangible](functions-4.md#obj_become_tangible)
@@ -1322,11 +1374,18 @@
    - [obj_set_behavior](functions-4.md#obj_set_behavior)
    - [obj_set_billboard](functions-4.md#obj_set_billboard)
    - [obj_set_cylboard](functions-4.md#obj_set_cylboard)
+   obj_set_face_angle
    - [obj_set_face_angle_to_move_angle](functions-4.md#obj_set_face_angle_to_move_angle)
+   obj_set_gfx_angle
+obj_set_gfx_pos
    - [obj_set_gfx_pos_at_obj_pos](functions-4.md#obj_set_gfx_pos_at_obj_pos)
    - [obj_set_gfx_pos_from_pos](functions-4.md#obj_set_gfx_pos_from_pos)
+   obj_set_gfx_scale
    - [obj_set_held_state](functions-4.md#obj_set_held_state)
    - [obj_set_hitbox](functions-4.md#obj_set_hitbox)
+   obj_set_hitbox_radius_and_height
+obj_set_hurtbox_radius_and_height
+obj_set_move_angle
    - [obj_set_parent_relative_pos](functions-4.md#obj_set_parent_relative_pos)
    - [obj_set_pos](functions-4.md#obj_set_pos)
    - [obj_set_pos_relative](functions-4.md#obj_set_pos_relative)
@@ -1338,6 +1397,7 @@
    - [obj_translate_xyz_random](functions-4.md#obj_translate_xyz_random)
    - [obj_translate_xz_random](functions-4.md#obj_translate_xz_random)
    - [obj_turn_toward_object](functions-4.md#obj_turn_toward_object)
+   obj_update_pos_from_parent_transformation
    - [player_performed_grab_escape_action](functions-4.md#player_performed_grab_escape_action)
    - [random_f32_around_zero](functions-4.md#random_f32_around_zero)
    - [set_mario_interact_hoot_if_in_range](functions-4.md#set_mario_interact_hoot_if_in_range)
@@ -1389,6 +1449,7 @@
    - [audio_sample_destroy](functions-4.md#audio_sample_destroy)
    - [audio_sample_load](functions-4.md#audio_sample_load)
    - [audio_sample_play](functions-4.md#audio_sample_play)
+   audio_sample_stop
    - [audio_stream_destroy](functions-4.md#audio_stream_destroy)
    - [audio_stream_get_frequency](functions-4.md#audio_stream_get_frequency)
    - [audio_stream_get_looping](functions-4.md#audio_stream_get_looping)
@@ -1431,6 +1492,16 @@
 
 <br />
 
+smlua_math_utils.h
+clamp
+clampf
+max
+maxf
+min
+minf
+sqr
+sqrf
+
 - smlua_misc_utils.h
    - [add_scroll_target](functions-4.md#add_scroll_target)
    - [allocate_mario_action](functions-4.md#allocate_mario_action)
@@ -1455,9 +1526,12 @@
    - [camera_config_set_x_sensitivity](functions-4.md#camera_config_set_x_sensitivity)
    - [camera_config_set_y_sensitivity](functions-4.md#camera_config_set_y_sensitivity)
    - [camera_freeze](functions-4.md#camera_freeze)
+   camera_is_frozen
    - [camera_unfreeze](functions-4.md#camera_unfreeze)
+course_is_main_course
    - [deref_s32_pointer](functions-4.md#deref_s32_pointer)
    - [get_current_save_file_num](functions-4.md#get_current_save_file_num)
+   get_dialog_box_state
    - [get_dialog_id](functions-4.md#get_dialog_id)
    - [get_environment_region](functions-4.md#get_environment_region)
    - [get_hand_foot_pos_x](functions-4.md#get_hand_foot_pos_x)
@@ -1468,6 +1542,7 @@
    - [get_temp_s32_pointer](functions-4.md#get_temp_s32_pointer)
    - [hud_get_value](functions-4.md#hud_get_value)
    - [hud_hide](functions-4.md#hud_hide)
+   hud_is_hidden
    - [hud_render_power_meter](functions-4.md#hud_render_power_meter)
    - [hud_set_value](functions-4.md#hud_set_value)
    - [hud_show](functions-4.md#hud_show)
@@ -1507,10 +1582,19 @@
    - [obj_get_temp_spawn_particles_info](functions-4.md#obj_get_temp_spawn_particles_info)
    - [obj_has_behavior_id](functions-4.md#obj_has_behavior_id)
    - [obj_has_model_extended](functions-4.md#obj_has_model_extended)
+   obj_is_attackable
+obj_is_breakable_object
+obj_is_bully
+obj_is_coin
+obj_is_exclamation_box
+obj_is_grabbable
+obj_is_mushroom_1up
+obj_is_secret
    - [obj_is_valid_for_interaction](functions-4.md#obj_is_valid_for_interaction)
    - [obj_move_xyz](functions-4.md#obj_move_xyz)
    - [obj_set_model_extended](functions-4.md#obj_set_model_extended)
    - [obj_set_vel](functions-4.md#obj_set_vel)
+   set_whirlpools
    - [spawn_non_sync_object](functions-4.md#spawn_non_sync_object)
    - [spawn_sync_object](functions-4.md#spawn_sync_object)
 
@@ -1571,91 +1655,3 @@
    - [get_area_terrain_size](functions-4.md#get_area_terrain_size)
    - [load_area_terrain](functions-4.md#load_area_terrain)
    - [load_object_collision_model](functions-4.md#load_object_collision_model)
-
-<br />
-
-
----
-
-<br />
-
-## [djui_hud_render_texture](#djui_hud_render_texture)
-
-Renders a texture to the screen.
-
-### Lua Example
-`djui_hud_render_texture(texInfo, x, y, scaleW, scaleH)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| texInfo | [TextureInfo](structs.md#TextureInfo) |
-| x | `number` |
-| y | `number` |
-| scaleW | `number` |
-| scaleH | `number` |
-
-### Returns
-- None
-
-### C Prototype
-`void djui_hud_render_texture(struct TextureInfo* texInfo, f32 x, f32 y, f32 scaleW, f32 scaleH);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## [get_texture_info](#get_texture_info)
-
-Retrieves a texture by name.
-
-### Lua Example
-`get_texture_info(textureName)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| textureName | `string` |
-
-### Returns
-- [TextureInfo](structs.md#TextureInfo)
-
-### C Prototype
-`N/A`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## [djui_hud_render_texture_interpolated](#djui_hud_render_texture_interpolated)
-
-### Lua Example
-`djui_hud_render_texture_interpolated(texInfo, prevX, prevY, prevScaleW, prevScaleH, x, y, scaleW, scaleH)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| texInfo | [TextureInfo](structs.md#TextureInfo) |
-| prevX | `number` |
-| prevY | `number` |
-| prevScaleW | `number` |
-| prevScaleH | `number` |
-| x | `number` |
-| y | `number` |
-| scaleW | `number` |
-| scaleH | `number` |
-
-### Returns
-- None
-
-### C Prototype
-`void djui_hud_render_texture_interpolated(struct TextureInfo* texInfo, f32 prevX, f32 prevY, f32 prevScaleW, f32 prevScaleH, f32 x, f32 y, f32 scaleW, f32 scaleH);`
-
-[:arrow_up_small:](#)
-
-<br />
-
----
-
-1 | [2](functions-2.md) | [3](functions-3.md) | [4](functions-4.md) | [next >](functions-2.md)]
-
