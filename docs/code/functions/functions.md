@@ -1,7 +1,5 @@
 ## [:rewind: Code](../main.md)
 
----
-
 # Supported Functions
 
 ## Coop Functions
@@ -24,34 +22,44 @@
 
 ---
 
-## Area Functions
+## area.c Functions
 
-- ### area_get_warp_node
+- ### [area_get_warp_node](area-functions/area_get_warp_node.md)
 
-- ### area_get_warp_node_from_params
+- ### [area_get_warp_node_from_params](area-functions/area_get_warp_node_from_params.md)
 
-- behavior_actions.h
-   - [arc_to_goal_pos](functions-2.md#arc_to_goal_pos)
-   - [bhv_1up_common_init](functions-2.md#bhv_1up_common_init)
-   - [bhv_1up_hidden_in_pole_loop](functions-2.md#bhv_1up_hidden_in_pole_loop)
-   - [bhv_1up_hidden_in_pole_spawner_loop](functions-2.md#bhv_1up_hidden_in_pole_spawner_loop)
-   - [bhv_1up_hidden_in_pole_trigger_loop](functions-2.md#bhv_1up_hidden_in_pole_trigger_loop)
-   - [bhv_1up_hidden_loop](functions-2.md#bhv_1up_hidden_loop)
-   - [bhv_1up_hidden_trigger_loop](functions-2.md#bhv_1up_hidden_trigger_loop)
-   - [bhv_1up_init](functions-2.md#bhv_1up_init)
-   - [bhv_1up_jump_on_approach_loop](functions-2.md#bhv_1up_jump_on_approach_loop)
-   - [bhv_1up_loop](functions-2.md#bhv_1up_loop)
-   - [bhv_1up_running_away_loop](functions-2.md#bhv_1up_running_away_loop)
-   - [bhv_1up_sliding_loop](functions-2.md#bhv_1up_sliding_loop)
-   - [bhv_1up_walking_loop](functions-2.md#bhv_1up_walking_loop)
-   - [bhv_act_selector_init](functions-2.md#bhv_act_selector_init)
-   - [bhv_act_selector_loop](functions-2.md#bhv_act_selector_loop)
-   - [bhv_act_selector_star_type_loop](functions-2.md#bhv_act_selector_star_type_loop)
-   - [bhv_activated_back_and_forth_platform_init](functions-2.md#bhv_activated_back_and_forth_platform_init)
-   - [bhv_activated_back_and_forth_platform_update](functions-2.md#bhv_activated_back_and_forth_platform_update)
-   - [bhv_alpha_boo_key_loop](functions-2.md#bhv_alpha_boo_key_loop)
-   - [bhv_ambient_sounds_init](functions-2.md#bhv_ambient_sounds_init)
-   - [bhv_animated_texture_loop](functions-2.md#bhv_animated_texture_loop)
+## behavior_actions.c Functions
+
+- ### [arc_to_goal_pos](behavior_actions/arc_to_goal_pos)
+
+- ### [bhv_1up_common_init](behavior_actions/bhv_1up_common_init)
+
+- ### [bhv_1up_hidden_in_pole_loop](behavior_actions/bhv_1up_hidden_in_pole_loop)
+
+- ### [bhv_1up_hidden_in_pole_spawner_loop](behavior_actions/bhv_1up_hidden_in_pole_spawner_loop)
+
+- ### [bhv_1up_hidden_in_pole_trigger_loop](behavior_actions/bhv_1up_hidden_in_pole_trigger_loop)
+
+- ### [bhv_1up_hidden_loop](behavior_actions/bhv_1up_hidden_loop)
+
+- ### [bhv_1up_hidden_trigger_loop](behavior_actions/bhv_1up_hidden_trigger_loop)
+
+- ### [bhv_1up_init](behavior_actions/bhv_1up_init)
+
+- ### [bhv_1up_jump_on_approach_loop](behavior_actions/bhv_1up_jump_on_approach_loop)
+
+- [bhv_1up_loop](functions-2.md#bhv_1up_loop)
+- [bhv_1up_running_away_loop](functions-2.md#bhv_1up_running_away_loop)
+- [bhv_1up_sliding_loop](functions-2.md#bhv_1up_sliding_loop)
+- [bhv_1up_walking_loop](functions-2.md#bhv_1up_walking_loop)
+- [bhv_act_selector_init](functions-2.md#bhv_act_selector_init)
+- [bhv_act_selector_loop](functions-2.md#bhv_act_selector_loop)
+- [bhv_act_selector_star_type_loop](functions-2.md#bhv_act_selector_star_type_loop)
+- [bhv_activated_back_and_forth_platform_init](functions-2.md#bhv_activated_back_and_forth_platform_init)
+- [bhv_activated_back_and_forth_platform_update](functions-2.md#bhv_activated_back_and_forth_platform_update)
+- [bhv_alpha_boo_key_loop](functions-2.md#bhv_alpha_boo_key_loop)
+- [bhv_ambient_sounds_init](functions-2.md#bhv_ambient_sounds_init)
+- [bhv_animated_texture_loop](functions-2.md#bhv_animated_texture_loop)
    - [bhv_animates_on_floor_switch_press_init](functions-2.md#bhv_animates_on_floor_switch_press_init)
    - [bhv_animates_on_floor_switch_press_loop](functions-2.md#bhv_animates_on_floor_switch_press_loop)
    - [bhv_arrow_lift_loop](functions-2.md#bhv_arrow_lift_loop)
